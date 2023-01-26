@@ -7,10 +7,10 @@
 長崎付近のTokyo測地系の座標をWGS84に変換する例
 
 ```js
-let jpr = require('jpr');
+import jpr from "https://code4fukui.github.io/JapanPlaneRectangular/src/jpr.js";
 
 console.log(jpr.toWGS84LngLat([-2862, 29086], 1, 'Tokyo'))
-// [129.46702893433056, 33.26558876847196]
+// [129.46702893433056, 33.265588768472014]
 ```
 
 ## Set up

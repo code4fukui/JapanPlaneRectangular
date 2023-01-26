@@ -14,8 +14,9 @@
  * http://d.hatena.ne.jp/tmizu23/20091215/1260868350
  */
 
-const proj4 = require('proj4')
-  ;
+import proj4 from 'https://code4fukui.github.io/proj4js/lib/index.js';
+
+const exports = {};
 
 /**
  * 測地系: WGS84系(lat,lng)
@@ -247,3 +248,5 @@ exports.toWGS84LngLat = function (yx, pointSystemNumber, pointSystemVer) {
 
   return proj4(base[pointSystemNumber], "EPSG:4326", yx);
 };
+
+export default exports;
