@@ -13,14 +13,6 @@ console.log(jpr.toWGS84LngLat([-2862, 29086], 1, 'Tokyo'))
 // [129.46702893433056, 33.265588768472014]
 ```
 
-## Set up
-
-npmからinstallします
-
-```js
-npm install jpr
-```
-
 ## API
 
 ### `@toWGS84LngLat(yx, pointSystemNumber, pointSystemVer)`
@@ -35,4 +27,3 @@ npm install jpr
 ```
 
 歴代の日本測地系(平面直角座標)をWGS84の緯度経度(lng, lat)に変換する
-
