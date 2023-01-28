@@ -27,3 +27,7 @@ console.log(jpr.toWGS84LngLat([-2862, 29086], 1, 'Tokyo'))
 ```
 
 歴代の日本測地系(平面直角座標)をWGS84の緯度経度(lng, lat)に変換する
+
+## Dependencies
+
+- [proj4js](https://github.com/code4fukui/proj4js)
