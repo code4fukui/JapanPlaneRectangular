@@ -1,11 +1,17 @@
 # Japan Plane Rectangular
 
-日本測地系(Tokyo/JGD2000/JGD2011)の平面直角座標をWGS84系の緯度経度に変換するライブラリ
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-## How To Use
+A library to convert Japan's plane rectangular coordinates (Tokyo/JGD2000/JGD2011) to WGS84 latitude and longitude.
 
-長崎付近のTokyo測地系の座標をWGS84に変換する例
+## Features
+- Convert plane rectangular coordinates of various Japanese coordinate systems to WGS84 latitude and longitude
+- Supports 19 different coordinate system zones across Japan
 
+## Requirements
+- [proj4js](https://github.com/code4fukui/proj4js)
+
+## Usage
 ```js
 import jpr from "https://code4fukui.github.io/JapanPlaneRectangular/src/jpr.js";
 
@@ -18,16 +24,15 @@ console.log(jpr.toWGS84LngLat([-2862, 29086], 1, 'Tokyo'))
 ### `@toWGS84LngLat(yx, pointSystemNumber, pointSystemVer)`
 
 ```text
-@param {Array} yx 日本測地系の平面直角座標
-@param {Number} pointSystemNumber 系番号[1-9]
-@param {String} 測地系の種類[Tokyo/JGD2000/JGD2011]
+@param {Array} yx Japan's plane rectangular coordinates
+@param {Number} pointSystemNumber Zone number [1-9/10-13/14-19]
+@param {String} pointSystemVer Coordinate system [Tokyo/JGD2000/JGD2011]
 @return {Array}
 @config {Number} WGS84: lng
 @config {Number} WGS84: lat
 ```
 
-歴代の日本測地系(平面直角座標)をWGS84の緯度経度(lng, lat)に変換する
+Converts various historical Japanese coordinate systems (plane rectangular coordinates) to WGS84 latitude and longitude.
 
-## Dependencies
-
-- [proj4js](https://github.com/code4fukui/proj4js)
+## License
+Apache License 2.0
